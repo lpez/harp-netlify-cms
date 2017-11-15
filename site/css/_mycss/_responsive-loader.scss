@@ -1,0 +1,12 @@
+@media all and (max-width: $screen-phone){
+	@import "_phone.scss";
+}
+@media (min-width: $screen-tablet){
+	@import "_tablet.scss";
+}
+@media (min-width: $screen-desktop){
+	@import "_desktop.scss";
+}
+@media (min-width: $screen-lg-desktop){
+	@import "_lg-desktop.scss";
+}

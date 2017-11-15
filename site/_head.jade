@@ -1,0 +1,14 @@
+head
+	meta( name='viewport', content='width=device-width, initial-scale=1.0' )
+	meta(charset='utf-8')
+	title= title
+	unless description == "" || description == nil
+		meta( name="description" content="#{ description }" )
+	unless keywords == "" || keywords == nil
+		meta( name="keywords" content="#{ keywords }" )
+	link( rel="alternate" href="https://www.my-company.com" hreflang="en-us")
+	link( rel="alternate" href="https://www.company.com" hreflang="x-default")
+	
+	//if lt IE 9
+		script( src='http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.6.2.js' )
+	link( rel="stylesheet" href="/css/main.css" )

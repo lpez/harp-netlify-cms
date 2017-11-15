@@ -1,0 +1,24 @@
+.navbar.navbar-default.navbar-fixed-top
+	.container.navbar-container
+		.navbar-header
+			button.navbar-toggle.collapsed("data-target"='.navbar-collapse' "data-toggle"="collapse")
+				span.icon-bar
+				span.icon-bar
+				span.icon-bar
+			a.navbar-brand.logo(href="/") Your Company
+		.navbar-collapse.collapse(role="navigation")
+			ul.nav.navbar-nav
+				li
+					a(href="/")
+						i.glyphicon.glyphicon-home
+						|  Home
+				li
+					a(href="/#about-us") About Us
+				li
+					a(href="/#products") Products
+				li.hidden-md
+					a(href="/#faq") FAQ
+				li
+					a(href="/#coupons")
+						i.glyphicon.glyphicon-tags
+						|  Coupons

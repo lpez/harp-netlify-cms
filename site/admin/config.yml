@@ -1,0 +1,17 @@
+backend:
+  name: github
+  repo:
+  branch: master
+
+media_folder: images/uploads
+
+collections:
+  - name: "post"
+    label: "Post"
+    source: "blog"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Draft", name: "published", widget: "hidden", default: "false"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}

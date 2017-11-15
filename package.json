@@ -1,0 +1,30 @@
+{
+  "name": "basic-site",
+  "version": "1.0.0",
+  "description": "This is a basic site template using Harp Gulp Browserify Imagemin",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "css": "^2.2.1",
+    "gulp-csso": "^3.0.0",
+    "gulp-purifycss": "^0.2.0",
+    "gulp-imagemin": "^3.4.0",
+    "child_process": "^1.0.2",
+    "harp": "^0.24.1",
+    "imagemin": "^5.3.1",
+    "imagemin-guetzli": "^1.0.0",
+    "imagemin-mozjpeg": "^6.0.0",
+    "purify": "^3.3.1",
+    "purify-css": "^1.1.9",
+    "run-sequence": "^2.2.0"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.12.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

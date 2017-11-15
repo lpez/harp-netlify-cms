@@ -1,0 +1,49 @@
+footer.footer
+	.container
+		.row
+			.col-xs-6
+				.block
+					div(itemscope='', itemtype='http://schema.org/LocalBusiness')
+						span(itemprop='name') Your Company
+						br
+						span(itemprop='telephone') 555-555-5555
+						br
+						span(itemprop='email')
+							a(href='mailto:info@fashion4windows.com') info@your-company.com
+						br
+						div(itemprop='address', itemscope='', itemtype='http://schema.org/PostalAddress')
+							span(itemprop='streetAddress') 555 Street St
+							br
+							span(itemprop='addressLocality') Your City
+							| , 
+							span(itemprop='addressRegion') TX 
+							span(itemprop='postalCode') 55555
+			.col-xs-6
+				.pull-right
+					p.logo Your Logo
+					p.copyright
+						| Your Company
+		.row
+			.col-sm-12
+				.contact-us-footer#contact-us-footer
+					h3 Contact Us
+					form(action="https://docs.google.com/forms/d/e/my-google-form/formResponse",  method="post", target="hidden_iframe", onsubmit="submitted=true;")
+						.form-group
+							input.form-control.input-sm(name="entry.", type="text", placeholder="Name", required)
+						.form-group
+							input.form-control.input-sm(name="entry.", type="text", placeholder="E-Mail", required)
+						.form-group
+							input.form-control.input-sm(name="entry.", placeholder="Phone", type="text")
+						.form-group
+							select.form-control.input-sm(name="entry.")
+								option(name="entry.", value="", disabled, selected) How did you hear about us?
+								option(name="entry.", value="Flyer") Flyer
+								option(name="entry.", value="A Friend") A Friend
+								option(name="entry.", value="Google") Google
+								option(name="entry.", value='Yahoo!') Yahoo!
+								option(name="entry.", value='Bing, MSN') Bing, MSN
+								option(name="entry.", value="Yellow Pages") Yellow Pages
+								option(name="entry.", value="Other") Other
+						.form-group
+							textarea.form-control.input-sm(name="entry.", placeholder="Message", rows="3")
+						button.btn.btn-success.pull-right(type="submit", value"Send") Send

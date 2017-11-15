@@ -1,0 +1,41 @@
+if banner.media_type == nil
+	div
+if banner.media_type == 'Youtube'
+	.youtube-video-wrapper
+		.youtube-video-container
+			iframe(width="100%" height="335px" src=banner.youtube frameborder="0" allowfullscreen="true")
+if banner.media_type == 'Photo'
+	.product-image-container
+		img(src=banner.photo alt=banner.photo_alt_text)
+if banner.media_type == 'HTML5Video'
+	.html5-video-container
+		video(poster=banner.video_poster controls="control" preload="none")
+			source(type="video/ogg" src=banner.ogg)
+			source(type="video/webm" src=banner.webm)
+			source(type="video/mp4" src=banner.m4v)
+			source(src=banner.mp4)
+			<object width="640" height="480" style="position:relative;" data="/videos/flashfox.swf" type="application/x-shockwave-flash">
+			<param value="/videos/flashfox.swf" name="movie">
+			<param value="true" name="allowFullScreen">
+			<param value="autoplay=true&controls=true&fullScreenEnabled=true&posterOnEnd=true&loop=false&src=platinumapp640x480.m4v" name="flashVars">
+			<embed width="640" height="480" pluginspage="http://www.adobe.com/go/getflashplayer_en" type="application/x-shockwave-flash" wmode="transparent" allowfullscreen="true" flashvars="autoplay=true&controls=true&fullScreenEnabled=true&posterOnEnd=true&loop=false&src=platinumapp640x480.m4v" style="position:relative;" src="/videos/flashfox.swf">
+			</object>
+if banner.media_type == 'Carousel'
+	unless banner.simple_photos == "" || banner.simple_photos == nil
+		#product-carousel.carousel.slide
+			ol.hidden-xs.carousel-indicators
+				each simple_photo in banner.simple_photos
+					li(data-target="#product-carousel" data-slide-to=simple_photo.position class=(simple_photo.position == "0" ? 'active' : ""))
+			.carousel-inner
+				each simple_photo in banner.simple_photos
+					.item(class=(simple_photo.position == "0" ? 'active' : ""))
+						img(src=simple_photo.photo alt=simple_photo.alt_text)
+						unless simple_photo.photo_title == "" || simple_photo.photo_title == nil
+							.carousel-caption
+								h2= simple_photo.photo_title
+			a.hidden-xs.left.carousel-control(href="#product-carousel" data-slide="prev")
+				i.glyphicon.glyphicon-chevron-left
+			a.hidden-xs.right.carousel-control(href="#product-carousel" data-slide="next")
+				i.glyphicon.glyphicon-chevron-right
+else
+	div
